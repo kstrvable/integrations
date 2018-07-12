@@ -1,0 +1,450 @@
+description: ""
+icon:
+  color: '#000000'
+  name: dashboard
+labels: []
+name: graylog
+scopes:
+- defaultValue: graylog
+  labelKey: role
+theme: light
+title: Graylog
+widgets:
+  chartWidgets:
+  - col: 8
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: ""
+          unitPosition: After
+      chartType: Line
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,org_graylog2_buffers_output_usage,:eq,role,graylog,:eq,:and,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: output buffer usage %
+    row: 4
+    width: 4
+  - col: 0
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: ""
+          unitPosition: After
+      chartType: Line
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,org_graylog2_buffers_input_usage,:eq,role,graylog,:eq,:and,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Input buffer usage %
+    row: 4
+    width: 4
+  - col: 4
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: ""
+          unitPosition: After
+      chartType: Line
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,org_graylog2_buffers_process_usage,:eq,role,graylog,:eq,:and,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Process buffer usage %
+    row: 4
+    width: 4
+  - col: 4
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: none
+          unitPosition: After
+      chartType: Line
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,sys.load.1,:eq,role,graylog,:eq,:and,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: 1 min load
+    row: 1
+    width: 5
+  - col: 0
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: bytes
+          unitPosition: After
+      chartType: Line
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,org_graylog2_journal_entries_uncommitted,:eq,role,graylog,:eq,:and,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Journal uncommited entries
+    row: 6
+    width: 4
+  - col: 9
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: bytes
+          unitPosition: After
+      chartType: Line
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,sys.mem.free,:eq,role,graylog,:eq,:and,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: free memory
+    row: 1
+    width: 3
+  - col: 12
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: bytes
+          unitPosition: After
+      chartType: Line
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,jvm_memory_heap_used,:eq,role,graylog,:eq,:and,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: JVM heap
+    row: 1
+    width: 4
+  - col: 4
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: ""
+          unitPosition: After
+      chartType: Line
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,org_graylog2_shared_buffers_processors_processbufferprocessor_processtime,:eq,role,graylog,:eq,:and,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: filter processing time
+    row: 6
+    width: 4
+  - col: 12
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: ""
+          unitPosition: After
+      chartType: Line
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,org_apache_logging_log4j_core_appender_debug_total,:eq,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      - query: name,org_apache_logging_log4j_core_appender_error_total,:eq,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      - query: name,org_apache_logging_log4j_core_appender_info_total,:eq,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      - query: name,org_apache_logging_log4j_core_appender_warn_total,:eq,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      - query: name,org_apache_logging_log4j_core_appender_fatal_total,:eq,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      - query: name,org_apache_logging_log4j_core_appender_trace_total,:eq,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Errors
+    row: 6
+    width: 4
+  - col: 12
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: ""
+          unitPosition: After
+      chartType: Line
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,org_graylog2_shared_buffers_inputbufferimpl_incomingmessages_total,:eq,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Incoming messages
+    row: 4
+    width: 4
+  - col: 8
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: ""
+          unitPosition: After
+      chartType: Line
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,org_graylog2_indexer_messages_messages_invalid_timestamps_total,:eq,:avg,(,host,),:by
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: invalid timestamps
+    row: 6
+    width: 4
+  markdownWidgets:
+  - col: 0
+    height: 1
+    options:
+      content: |
+        <h1>System</h1>
+      markdown: '# System'
+    row: 0
+    width: 16
+  - col: 0
+    height: 1
+    options:
+      content: |
+        <h1>Processing and messages</h1>
+      markdown: '# Processing and messages'
+    row: 3
+    width: 16
+  statusWidgets:
+  - col: 0
+    height: 2
+    id: 7c38d926-b10e-4cdf-a080-34d2dde13624
+    options:
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - scoped: true
+        service: graylog
+      showIcon: true
+      title: Graylog status
+    row: 1
+    width: 2
+  - col: 2
+    height: 2
+    id: 8be42760-7bbf-40b5-86dd-af7118eb9b57
+    options:
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - scoped: false
+        service: elasticsearch2
+      showIcon: true
+      title: Elasticsearch status
+    row: 1
+    width: 2
